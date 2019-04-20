@@ -1,5 +1,7 @@
 {
   "name": "micelaneos",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

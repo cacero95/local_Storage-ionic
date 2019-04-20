@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-pagina1',
+  templateUrl: './pagina1.page.html',
+  styleUrls: ['./pagina1.page.scss'],
 })
-export class HomePage {
+export class Pagina1Page implements OnInit {
 
+  constructor(private navCtrl: NavController) { }
+
+
+  /**
+   * ciclo de vida en angular, e ionic
+   */
 
   ngOnInit() {
     console.log('ngOnInit');
@@ -24,7 +31,11 @@ export class HomePage {
     console.log('ngDoCheck');
     
   }
-  
+  ngAfterContentInit() {
+    //Called after ngOnInit when the component's or directive's content has been initialized.
+    //Add 'implements AfterContentInit' to the class.
+    console.log('ngAfterContentInit');
+  }
   ngAfterContentChecked() {
     //Called after every check of the component's or directive's content.
     //Add 'implements AfterContentChecked' to the class.

@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title>pagina2</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label position="floating">Digite un dato</ion-label>
+        <ion-input [(ngModel)]="value" type="text"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="save()">Save</ion-button>
+
+    <ion-button expand="full" (click)="cargar()">cargar</ion-button>
+
+
+    <ion-label>{{para_mostrar}}</ion-label>
+</ion-content>
